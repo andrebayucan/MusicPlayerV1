@@ -161,10 +161,11 @@ seekBar.oninput = function() {
 };
 
 const playMusic = () => {
-    music.play();
-    if(playBtn.className.includes('pause')){
+    var isPlaying = music.currentTime > 0 && !music.paused && !music.ended && music.readyState > music.HAVE_CURRENT_DATA;
+    if (!isPlaying)
+        music.play();
+    if(playBtn.className.includes('pause'))
         playBtn.classList.toggle('pause');
-    }
 }
 
 //Forward and backward button
