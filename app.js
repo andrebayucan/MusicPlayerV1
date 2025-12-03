@@ -97,14 +97,14 @@ const setMusic = (i) => {
     rightSpace.style.backgroundImage = `url('${song.background}')`;
 
     currentTime.innerHTML = '00 : 00';
-    setTimeout(() => {
-        seekBar.max = music.duration;
-        musicDuration.innerHTML = formatTime(music.duration);
-    }, 300);
-
     updateSongIndicator();
     
 }
+
+music.addEventListener('loadedmetadata', () => {
+    seekBar.max = music.duration;
+    musicDuration.innerHTML = formatTime(music.duration);
+});
 
 
 // Formatting time in min and seconds
