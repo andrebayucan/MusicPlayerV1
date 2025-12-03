@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/44e2d57ea2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <audio src="" id="audio"></audio>
+
+    <div class="scene">
+
+        <div class="left-space">
+            <div class="additional-controls">
+                <div class="volume-section">
+                    <div class="volume-btn">
+                        <span class="volume-icon">
+                            <i class="fas fa-volume-up"></i>
+                        </span>
+                    </div>
+                    <input type="range" value="50" class="volume-bar">
+                    <div class="display-volume">
+                        <p>Volume:</p>
+                        <span class="current-volume">50%</span>
+                    </div>
+                </div>
+
+                <div class="btn-section">
+                    <button class="btn shuffle-btn">
+                        <span class="shuffle-icon">
+                            <i class="fas fa-random"></i>
+                        </span>
+                    </button>
+
+                    <button class="btn loop-btn">
+                        <span class="loop-icon">
+                            <i class="fas fa-repeat"></i>
+                        </span>
+                    </button>
+                    
+                    <button class="btn nextList-btn">
+                        <span class="nextList-icon">
+                            <i class="fas fa-list"></i>
+                        </span>
+                    </button>
+
+                    <button class="btn info-btn">
+                        <span class="info-icon">
+                            <i class="fas fa-question"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="music-player">
+            <div class="info-window hidden">
+                <p class="info-text">
+                    This is a music player created using HTML, CSS, and Javascript!
+                </p>
+                <p class="info-text">
+                    You can't actually add or remove any songs, and all changes reset when the page is refreshed.
+                    If I have time, I plan to use React and other languages to create a version two of this project.
+                </p>
+                <p class="info-text">
+                    I hope to add more control over the song queue, permanent changes for user playlists, the ability to
+                    add and remove songs using youtube links, and many more customization options!
+                </p>
+                
+            </div>
+
+            <div class="cover"></div>
+
+            <h1 class="music-name">N/A</h1>
+            <p class="artist-name">N/A</p>
+
+            <div class="song-slider">
+                <input type="range" value="0" class="seek-bar">
+                <div class="time-info">
+                    <span class="current-time">00:00</span>
+                    <span class="song-duration">00:00</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="btn backward-btn">
+                    <span class="backward-icon">
+                        <i class="fas fa-step-backward"></i>
+                    </span>
+                </button>
+                <button class="play-btn pause">
+                    <span class="play-icon">
+                        <i class="fas fa-play"></i>
+                    </span>
+                </button>
+                <button class="btn forward-btn">
+                    <span class="forward-icon">
+                        <i class="fas fa-forward"></i>
+                    </span>
+                </button>
+            </div>
+        </div>
+        
+
+        <div class="right-space">
+            <div class="nextListHolder hidden">
+                <ul class="nextList">
+                    
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
