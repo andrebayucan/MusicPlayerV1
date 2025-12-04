@@ -77,6 +77,13 @@ let songs = [
         background: 'bkgds/Supernatural bkgd.png'
     },
     {
+        name: 'Get Up',
+        path: 'songs/Get Up.mp3',
+        artist: 'NewJeans',
+        cover: 'images/Get Up.png',
+        background: 'bkgds/Get Up bkgd.png'
+    },
+    {
         name: 'Zombies on Your Lawn',
         path: 'songs/Zombies on Your Lawn.mp3',
         artist: 'Laura Shigihara',
